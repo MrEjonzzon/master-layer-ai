@@ -10,6 +10,8 @@ services:
       - WEBUI_NAME=Master Layer AI
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    volumes:
+      - ./webui-data:/app/backend/data:z
     restart: unless-stopped
     networks:
       - ai-network
